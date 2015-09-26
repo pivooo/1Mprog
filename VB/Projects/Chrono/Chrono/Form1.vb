@@ -37,7 +37,6 @@
         N = timelapse Mod 60
         sec = N.ToString("00")
         Return hour + ":" + min + ":" + sec
-
     End Function
 
     Private Sub btnSwitch_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnSwitch.Click
