@@ -27,13 +27,15 @@
         Dim hour As String
         Dim min As String
         Dim sec As String
+        Format(N, "00")
+        Format(hour, "")
         N = timelapse \ 3600
-        hour = Str(N)
+        hour = N.ToString("00")
         timelapse = timelapse - 3600 * N
         N = timelapse \ 60
-        min = Str(N)
+        min = N.ToString("00")
         N = timelapse Mod 60
-        sec = Str(N)
+        sec = N.ToString("00")
         Return hour + ":" + min + ":" + sec
 
     End Function
