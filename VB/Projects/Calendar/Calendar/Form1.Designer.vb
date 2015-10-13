@@ -1,4 +1,4 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class frmCalendar
     Inherits System.Windows.Forms.Form
 
@@ -17,7 +17,7 @@ Partial Class frmCalendar
     'Requise par le Concepteur Windows Form
     Private components As System.ComponentModel.IContainer
 
-    'REMARQUE : la procédure suivante est requise par le Concepteur Windows Form
+    'REMARQUE : la procédure suivante est requise par le Concepteur Windows Form
     'Elle peut être modifiée à l'aide du Concepteur Windows Form.  
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
@@ -76,7 +76,7 @@ Partial Class frmCalendar
         Me.btnQuit.Location = New System.Drawing.Point(322, 191)
         Me.btnQuit.Name = "btnQuit"
         Me.btnQuit.Size = New System.Drawing.Size(75, 23)
-        Me.btnQuit.TabIndex = 5
+        Me.btnQuit.TabIndex = 6
         Me.btnQuit.Text = "Button1"
         Me.btnQuit.UseVisualStyleBackColor = True
         '
@@ -85,7 +85,7 @@ Partial Class frmCalendar
         Me.btnPause.Location = New System.Drawing.Point(119, 191)
         Me.btnPause.Name = "btnPause"
         Me.btnPause.Size = New System.Drawing.Size(75, 23)
-        Me.btnPause.TabIndex = 6
+        Me.btnPause.TabIndex = 5
         Me.btnPause.Text = "Button1"
         Me.btnPause.UseVisualStyleBackColor = True
         '

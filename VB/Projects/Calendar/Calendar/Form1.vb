@@ -1,12 +1,13 @@
-﻿Public Class frmCalendar
+Public Class frmCalendar
     Dim TimerOn As Boolean
+    Dim Inter As UShort = 1000
 
     Private Sub frmCalendar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Text = "Calendrier"
 
         btnPause.Text = "Pause"
         btnQuit.Text = "Quitter"
-        btnQuit.Focus()
+        btnPause.Focus()
 
         edtDayS.Enabled = True
         edtDayN.Enabled = True
@@ -20,7 +21,7 @@
         edtYear.ReadOnly = True
         edtTime.ReadOnly = True
 
-        tmrRefresh.Interval = 1000
+        tmrRefresh.Interval = Inter
 
         displayTime(Now)
         tmrRefresh.Enabled = True
