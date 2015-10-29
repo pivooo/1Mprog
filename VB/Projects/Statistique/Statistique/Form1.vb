@@ -39,7 +39,6 @@
     Private Sub edtElem_Keypress(ByVal sender As System.Object, ByVal e As KeyPressEventArgs) Handles edtElem.KeyPress
         Dim edtPointer As TextBox = DirectCast(sender, TextBox)
         Static Dim nCounter, nComa, elemCounter As Byte, Coma, notFirst As Boolean
-        While elemCounter < nombre
             If e.KeyChar = Chr(13) Then
                 If edtPointer.Text = "" Then
                     edtPointer.Focus()
@@ -96,7 +95,6 @@
             If (elemCounter < nombre) Then
                 Exit Sub
             End If
-        End While
         elemCounter = 0
         notFirst = False
         edtPointer.ReadOnly = True
