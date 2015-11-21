@@ -3,6 +3,7 @@
     Dim filereader As String
     Private Sub mdpChange_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         frmMdp.Hide()
+        My.Settings.Reload()
 
         lblPw1.Text = "Nouveau MDP:"
         lblPw2.Text = "Confirmation:"
@@ -11,8 +12,8 @@
         edtPw1.Focus()
         edtPw2.Enabled = False
 
-        edtPw1.PasswordChar = "*"
-        edtPw2.PasswordChar = "*"
+        edtPw1.PasswordChar = frmMdp.pwchar
+        edtPw2.PasswordChar = frmMdp.pwchar
 
         btnShow.Enabled = True
         btnShow.Text = "Montrer"
@@ -44,7 +45,8 @@
                 Case DialogResult.OK
                     My.Computer.FileSystem.WriteAllText("mdp.txt", edtPw1.Text, False)
                     filereader = My.Computer.FileSystem.ReadAllText("mdp.txt")
-                    frmMdp.edtMdp.Tag = filereader
+                    My.Settings.Mdp = filereader
+                    My.Settings.Save()
                     Init()
                     MyBase.Hide()
                     frmMdp.Show()
@@ -61,8 +63,8 @@
     Private Sub btnShow_Click(sender As Object, e As EventArgs) Handles btnShow.Click
         Static Dim show As Boolean
         If show Then
-            edtPw1.PasswordChar = "*"
-            edtPw2.PasswordChar = "*"
+            edtPw1.PasswordChar = frmMdp.pwchar
+            edtPw2.PasswordChar = frmMdp.pwchar
             show = False
             btnShow.Text = "Montrer"
         Else
