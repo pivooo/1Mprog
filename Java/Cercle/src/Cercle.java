@@ -26,8 +26,8 @@ public class Cercle {
           */
     }
 
-    public void setYpos(int ypos) {
-        this.ypos = ypos;
+    public void setYpos(int newypos) {
+        ypos = newypos;
     }
 
     public void setRayon(int rayon) {
