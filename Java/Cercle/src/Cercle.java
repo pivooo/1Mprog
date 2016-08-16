@@ -22,7 +22,7 @@ public class Cercle {
     public void setXpos(int xpos) {
         this.xpos = xpos;       // this pas obligatoire, j'ai même pas écrit cette fonction vous taper setXpos et ça vous la propose toute seul (alternative en dessous)
         /*
-         xpos = newXpos;        // Si on considère que newXpos est le paramètre d'entrée
+         xpos = newXpos;        // Si on considère que newXpos est le paramètre d'entrée (voir exemple ypos)
           */
     }
 
